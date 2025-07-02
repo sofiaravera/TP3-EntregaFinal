@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="icon" href="imagenes/portfolio.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+             background-image: url("imagenes/playabyn.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+        }
+        main {
+            height: 700px;
+        }
+        .boton {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        .modaloculto {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+        blockquote{
+            margin-bottom: 20px;
+        }
+        .modal img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .cerrar {
+            padding: 10px 20px;
+            background-color: #5fd6fa;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo-item">  <img src="imagenes/logo.png" class="logo"> </li> 
+            <li> <a href="index.html"> MENÚ </a></li>
+            <li> <a href="index.html#aboutme"> SOBRE MÍ </a></li>
+            <li> <a href="index.html#work"> TRABAJOS </a></li>
+            <li> <a href="index.html#contact"> CONTACTO </a></li>
+            <li> <a href="../index.html"> LINKTREE </a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+     <button class="boton" id="clickaqui">Click aqui!</button>
+
+     <div class="modaloculto" id="myModal">
+        <div class="modal">
+            <blockquote>"El mejor color es aquel que te hace feliz" ~Anónimo</blockquote>
+            <img src="imagenes/playa.jpg" class="foto"> 
+            <button class="cerrar" id="cerrarModal">Cerrar</button>
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+       <p>Hecho por Sofía Ravera, 2025</p>
+       <a href="https://www.linkedin.com/in/sofia-ravera-6b0ab8369" target="_blank">
+       <img src="imagenes/linkedin.png" alt="linkedin" >
+       </a> 
+    </footer>
+
+    <script>
+        const modal = document.getElementById('myModal'); 
+
+        const abrirModal = document.getElementById('clickaqui');
+        abrirModal.addEventListener ('click', abreModal) 
+        function abreModal () {
+            modal.style.display = 'flex';
+        };
+
+        const cerrarModal = document.getElementById('cerrarModal');
+        cerrarModal.addEventListener('click', cierraModal)
+        function cierraModal() {
+            modal.style.display = 'none';
+        }
+
+    </script>
+
+</body>
+</html>

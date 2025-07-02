@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="icon" href="imagenes/portfolio.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: black;
+            padding: 30px;
+        }
+        .slider {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .slider img {
+            height: auto;
+            width:80%;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .slide.active {
+            display: block;
+            width: 70%;
+        }
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .derecha, .izquierda { 
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width:768px) {
+        nav {
+            height: auto; 
+        }
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin: 5px 0;
+        }  
+        .derecha, .izquierda { 
+            width: 25px;
+            margin-bottom: 10px;
+        }
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo-item">  <img src="imagenes/logo.png" class="logo"> </li> 
+            <li> <a href="index.html"> MENÚ </a></li>
+            <li> <a href="index.html#aboutme"> SOBRE MÍ </a></li>
+            <li> <a href="index.html#work"> TRABAJOS </a></li>
+            <li> <a href="index.html#contact"> CONTACTO </a></li>
+            <li> <a href="../index.html"> LINKTREE </a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <button id="prev"> <img src="imagenes/izquierda.png" class="izquierda"> </button>
+    
+    <div class="slider">
+       <img src="imagenes/playa.jpg" class="slide active">
+       <img src="imagenes/cascada.jpg" class="slide">
+       <img src="imagenes/forest.jpg" class="slide">
+    </div>
+
+    <button id="next"> <img src="imagenes/derecha.png" class="derecha"> </button>
+    </main>
+
+    <footer>
+       <p>Hecho por Sofía Ravera, 2025</p>
+       <a href="https://www.linkedin.com/in/sofia-ravera-6b0ab8369" target="_blank">
+       <img src="imagenes/linkedin.png" alt="linkedin" >
+       </a> 
+    </footer>
+
+    <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    const siguiente = document.getElementById('next'); 
+    siguiente.addEventListener('click', () => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+    });
+
+    const previo = document.getElementById('prev');
+    previo.addEventListener('click', () => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    });
+   </script>
+</body>
+</html>
