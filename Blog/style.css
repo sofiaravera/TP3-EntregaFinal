@@ -1,0 +1,344 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header {
+    height: 50px;
+    line-height: 50px;
+    background-color: bisque;
+    text-align: center;
+    font-size: 35px;
+    color: #991204;
+}
+.satisfy-regular {
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+body{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-image: url("imagenes/fondo2.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+nav {
+    background-color: rgb(251, 246, 234);
+    height: 50px; 
+    line-height: 50px;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+nav li {
+    display: inline;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+li a:hover{
+    text-decoration: none;
+    color:#991204;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+section {
+    background-color: rgb(241, 231, 209);
+    width: 50vw;
+}
+aside {
+    background-color:  rgb(241, 231, 209);
+    width: 20vw;
+    margin-left: 2%;
+}
+article img {
+    height: auto;
+    width: 100%;
+}
+article {
+    margin: 3% 3%;
+}
+h1 {
+    font-size: 25px;
+    color: #991204;
+}
+.paginacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+p {
+    margin: 2%;
+}
+h3 {
+    margin: 2%;
+    color: #991204;
+}
+h4{
+    margin: 2%;
+    text-decoration: underline #991204;
+}
+hr {
+    margin-top: 5%;
+}
+footer{
+    background-color: #991204;
+    color: antiquewhite;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h2 {
+    color: #991204;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+div img {
+    width: 90%;
+    height: auto
+}
+.perfil {
+    margin-top: 2%;
+}
+.posteos a {
+    text-decoration: none;
+}
+.posteos ul {
+    list-style: none;
+}
+aside div{
+    margin: 2%;
+}
+div hr {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.galeria section {
+    background-color: rgb(241, 231, 209);
+    width: 30%;
+    margin: 1%;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+}
+.galeria .fecha {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+}
+.galeria img{
+    width: 70%;
+    height: auto;
+    margin-top: 10px;
+}
+.galeria h1{
+    margin-bottom: 10px 0;
+    text-decoration: underline;
+}
+.galeria section:hover{
+     transform: scale(1.05);
+}
+.presentacion {
+    display: flex;
+    justify-content: center;
+}
+.contenedor {
+    background-color: rgb(241, 231, 209);
+    width: 70vw;
+    height: 40vw;
+    text-align: center;
+}
+.contenedor h1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.contenedor p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.fotopresentacion {
+    height: 300px;
+    width: auto;
+}
+.suscribiteya {
+    background-color: #991204;
+    color: antiquewhite;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.suscribiteya2 {
+    height: 25px;
+}
+.fecha {
+    font-size: small;
+}
+.button {
+    text-decoration: none;
+    background-color: #991204;
+    color: antiquewhite;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+.accordion {
+  background-color: rgb(251, 246, 234);
+  font-family: auto;
+  color: #991204;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: bisque; 
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(251, 246, 234);
+  overflow: hidden;
+}
+.fcontacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fcontacto section {
+  text-align: center;
+  background-color: rgb(241, 231, 209);
+  width: 70vw;
+  gap: 20px;
+}
+.fcontacto section h1 {
+  margin-top: 20px;
+}
+form label, form input, form textarea {
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+label {
+  color:#991204;
+  margin-top: 20px;
+}
+.mensaje {
+    vertical-align: top;
+}
+input {
+  background-color: rgb(251, 246, 234);
+  width: 70%;
+  height: auto;
+  margin-top: 20px;
+  border: 0;
+}
+textarea {
+  background-color: rgb(251, 246, 234);
+  width: 70%;
+  height: auto;
+  margin-top: 20px;
+  border: 0;
+}
+.submit {
+  text-decoration: none;
+  background-color: #991204;
+  color: antiquewhite;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-bottom: 50px;
+  width: 40vw;
+}
+.mailcontacto{
+  text-decoration: none;
+  color: black;
+}
+.bienvenido{
+    color: #991204;
+}
+.inputcontacto{
+  height: 30px;  
+}
+.subir{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.subir img{
+    width: 50px;
+}
+@media (max-width:768px){
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    section {
+        width: 100%;
+    }
+    aside {
+        order: -1;
+        width: 100%;
+        margin-left: 0;
+    }
+    nav {
+        background-color: rgb(251, 246, 234);
+        height: auto; 
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    nav li {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+    li a:hover{
+        text-decoration: none;
+        color:#991204;
+    }
+    .galeria{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .galeria section {
+        width: 90%;
+    }
+    .fcontacto {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    .fcontacto section {
+        width: 100%;
+    }
+}
